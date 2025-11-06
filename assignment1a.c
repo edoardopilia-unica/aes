@@ -16,10 +16,9 @@ int main(void)
 
     // 1) (Optional) set inputs if these are input channels (TRI=1s)
     *(volatile int*)(0x40010000 + 0x4) = 0xFFFFFFFF; // GPIO1 TRI
-    *(volatile int*)(0x40020000 + 0x4) = 0xFFFFFFFF; // GPIO2 TRI
 
     while (1) {
-       if (0b0001) *gpio_0_data = *gpio_1_data;
+       *gpio_0_data = *gpio_1_data;
     }
 }
 
