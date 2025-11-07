@@ -1,5 +1,5 @@
 /*
-    Assignment 1B: Interrupt Part 1
+    Assignment 1C: Interrupt Part 2
     Edoardo Pilia - 70/91/00138
  */
  
@@ -58,7 +58,7 @@ int main(void)
     }
 }
 
-int last_digit = 8;
+int last_digit = 8; //70/91/00138
 
 // Interrupt Service Routines
 void myISR(void)
