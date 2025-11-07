@@ -18,7 +18,7 @@ int main(void)
     *(volatile int*)(0x40010000 + 0x4) = 0xFFFFFFFF; // GPIO1 TRI
 
     while (1) {
-       *gpio_0_data = *gpio_1_data;
+       *gpio_0_data = *gpio_1_data; //this line set the LEDs' pattern equal to switches' pattern
     }
 }
 
