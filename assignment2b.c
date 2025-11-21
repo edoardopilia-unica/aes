@@ -19,10 +19,8 @@ However, these images have to follow some specifications:
 #include "xuartps.h"
 
 
-int sizeof_numeral(int num, char* buf);
 unsigned char* receive_image(int* min_addr, int* max_addr, int* len_final, int* width, int* height, int* len_header_);
 void scale(int min, int max, int len_final, int width, int height, unsigned char* image_array, int len_header);
-
 
 int main()
 {
