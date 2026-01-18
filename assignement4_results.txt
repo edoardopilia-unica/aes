@@ -1,0 +1,26 @@
+All times are expressed in clock cycles.
+
+Array Size 10:
+Serial:                 4131
+Serial w/ optimization: 278
+Parallel:               3251
+
+Array Size 50:
+Serial:                 18520
+Serial w/ optimization: 2847
+Parallel:               12268
+
+Array Size 100:
+Serial:                 36773
+Serial w/ optimization: 3169 
+Parallel:               22949
+
+Array Size 200:
+Serial:                 73199
+Serial w/ optimization: 6230
+Parallel:               45173
+
+Array Size 500:
+Serial:                 171188
+Serial w/ optimization: 15080
+Parallel:               104259
