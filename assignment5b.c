@@ -235,12 +235,15 @@ int resultsProcessing(DATA* results, int size){
 }
 
 void receive_image(){
-    //First optimization
-    //This will work only if the image is modified deleting the MSB (00)
+  //Optimization
+  //This will work only if the image is converted to do not have the MSB (00) or if the sending script is adapted
+  //to send only the LSB
 	for (int i=0; i<28*28; i++){
-        u8 data = XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR);
-        image_array[i] = (DATA)data; 
-    }
+		u8 data1 = XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR); 
+		u8 data2 = 0x00;
+		DATA data_16 = (data<<8) + data1;
+		image_array[i] = data_16;
+	}
 }
 
 int classify_image(){
