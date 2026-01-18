@@ -241,7 +241,7 @@ void receive_image(){
 	for (int i=0; i<28*28; i++){
 		u8 data1 = XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR); 
 		u8 data2 = 0x00;
-		DATA data_16 = (data<<8) + data1;
+		DATA data_16 = (data2<<8) + data1;
 		image_array[i] = data_16;
 	}
 }
